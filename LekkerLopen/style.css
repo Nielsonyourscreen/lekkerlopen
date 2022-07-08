@@ -1,8 +1,8 @@
 body {
-  background-color: #e5ded6;
-  font: 0.8em Arial, sans-serif;
-  height: 100vh;
   margin: 0;
+  font: 0.8em Arial, sans-serif;
+  background-color: #e5ded6;
+  height: 100vh;
 }
 
 .container {
@@ -24,7 +24,7 @@ header {
 main {
   background-color: #e5ded6;
   border: 5px solid coral;
-  margin: 0;
+  margin-top: 10;
   padding: 1em;
 }
 
@@ -36,34 +36,52 @@ footer {
 
 img {
   border-radius: 2%;
-  display: block;
-  margin: auto;
   width: 70%;
+  margin: auto;
+  display: block;
 }
 
+iframe {
+  width: 60%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  font-size: small;
+  margin-bottom: 5px;
+}
 .navigation ul li {
   list-style-type: none;
   display: inline;
-  font-size: small;
-  padding: 2px;
 }
 
 .navigation li a:link,
 a:visited {
+  color: coral;
   background-color: white;
   border: 2px solid;
   border-radius: 20%;
-  color: coral;
-  display: inline-block;
   padding: 0.4em;
   text-align: center;
   text-decoration: none;
+  display: inline-block;
 }
-
+@media screen and (max-width: 768px) {
+  h1,
+  h2,
+  h3 {
+    font-style: italic;
+  }
+}
 @media screen and (min-width: 768px) {
-  h1 {
+  h1,
+  h2,
+  h3 {
     font-family: "Aclonica";
-    font-size: 28px;
+    font-size: 26px;
   }
 
   body {
@@ -76,5 +94,10 @@ a:visited {
       "header header"
       "main main "
       "footer footer";
+  }
+  iframe {
+    position: relative;
+    width: 720px;
+    height: 480px;
   }
 }
